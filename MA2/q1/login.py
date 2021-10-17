@@ -42,7 +42,7 @@ output = "Obs! The provided username and password do no match"
 with open("hashing/MA2/q1/shadow.txt","r") as shadowRead:
     # Looping over lines in shadowfile
     for line in shadowRead:
-        # Test if line in shadowfile matches entry from
+        # Test if the provided username and password match the line in the shadow file
         if line == entry:
             output = "You’re successfully logged in!"
             break
