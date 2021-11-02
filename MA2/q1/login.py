@@ -7,6 +7,8 @@ If there are no matches the script will output "Obs! The provided username and p
 import hashlib
 # Using getpass to make password input hidden
 from getpass import getpass
+# Using os.path to get path to shadow file
+import os.path
 
 
 # Using function from registration to make sample entry
@@ -39,7 +41,7 @@ entry = makeEntry(username,password)
 output = "Obs! The provided username and password do no match"
 
 # Opening shadow file with read permissions only (r parameter)
-with open("hashing/MA2/q1/shadow.txt","r") as shadowRead:
+with open(os.path.dirname(__file__) + "/shadow.txt","r") as shadowRead:
     # Looping over lines in shadowfile
     for line in shadowRead:
         # Test if the provided username and password match the line in the shadow file
