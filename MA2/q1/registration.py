@@ -35,7 +35,8 @@ password = getpass("Please choose a password:\n")
 line = makeEntry(username,password)
 # Opening shadow file using a context manager, parameter a to append to the file and not overwrite
 # NOTE that the file directory must sometimes be changen for it to work. If shadow.txt does not exist it will create it.
-with open(os.path.dirname(__file__) + "/shadow.txt","a") as shadowWrite:
+
+with open("MA2/q1/shadow.txt","a") as shadowWrite:
     # Writing line to shadow file
     shadowWrite.write(line)
     pass
