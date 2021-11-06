@@ -5,6 +5,8 @@ Colon seperating the username and password"""
 import hashlib
 # Using getpass to make password input hidden
 from getpass import getpass
+# Using os.path to get path to shadow file
+import os.path
 
 
 def makeEntry(username, password:str) -> str:
@@ -33,6 +35,7 @@ password = getpass("Please choose a password:\n")
 line = makeEntry(username,password)
 # Opening shadow file using a context manager, parameter a to append to the file and not overwrite
 # NOTE that the file directory must sometimes be changen for it to work. If shadow.txt does not exist it will create it.
+
 with open("MA2/q1/shadow.txt","a") as shadowWrite:
     # Writing line to shadow file
     shadowWrite.write(line)

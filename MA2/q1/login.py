@@ -7,6 +7,8 @@ If there are no matches the script will output "Obs! The provided username and p
 import hashlib
 # Using getpass to make password input hidden
 from getpass import getpass
+# Using os.path to get path to shadow file
+import os.path
 
 
 # Using function from registration to make sample entry
